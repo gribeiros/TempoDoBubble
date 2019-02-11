@@ -12,7 +12,7 @@ void burble_sort( int arr[100000],int tam )
 
       int i,j,aux;
       for(i=0;i<tam;i++){
-          for(j=0;j<tam;j++){
+          for(j=0;j<tam-1-i;j++){
             if(arr[j] > arr[j+1]){
                 cont++;
                 aux = arr[j];
@@ -30,7 +30,7 @@ int main()
 
     int a,t,i;
     int numeros[100000];
-    t = 1000;
+    t = 100000;
     for(a=0;a<t;a++){
         numeros[a] = rand()%101;
         if(numeros[a] < 0){
